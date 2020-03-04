@@ -44,10 +44,10 @@ test:
 about:
   home: https://taskcluster.github.io/json-e
   license: MPL-2.0
-  license_family: OTHER
+  license_family: MOZILLA
   license_file: LICENSE
   summary: A data-structure parameterization system written for embedding context in JSON objects
-  doc_url: http://simplejson.readthedocs.io/
+  doc_url: https://simplejson.readthedocs.io
   dev_url: https://github.com/taskcluster/json-e
   description: >
     The central idea is to treat a data structure as a "template" and transform it, using another data structure as context, to produce an output data structure.
