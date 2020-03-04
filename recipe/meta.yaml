@@ -34,9 +34,11 @@ test:
     - pyyaml
     - python-dateutil
     - pep8
+    - pip
   imports:
     - jsone
   commands:
+    - python -m pip check
     - cd test && nosetests
 
 about:
