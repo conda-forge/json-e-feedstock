@@ -5,7 +5,7 @@ Home: https://taskcluster.github.io/json-e
 
 Package license: MPL-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A data-structure parameterization system written for embedding context in JSON objects
 
