@@ -2,7 +2,7 @@
 {% set version = "4.4.1" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
@@ -13,7 +13,7 @@ build:
   noarch: python
   number: 0
   script:
-    - {{ PYTHON }} setup.py sdist
+    - cd py && {{ PYTHON }} setup.py sdist
     - cd dist && {{ PYTHON }} -m pip install {{ name }}-{{ version }}.tar.gz -vv
 
 requirements:
@@ -25,7 +25,7 @@ requirements:
 
 test:
   source_files:
-    - test
+    - py/test
     - specification.yml
   requires:
     - freezegun
@@ -39,7 +39,7 @@ test:
     - jsone
   commands:
     - python -m pip check
-    - cd test && nosetests
+    - cd py/test && nosetests
 
 about:
   home: https://taskcluster.github.io/json-e
