@@ -1,5 +1,5 @@
 {% set name = "json-e" %}
-{% set version = "4.3.0" %}
+{% set version = "4.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/taskcluster/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: e3b0b9b0582c8da1d3cb7dc12f971954704f2bb1add0d498fa3f53dd67040f8f
+  sha256: 895a45a60e624ee9cd9dd30bc489c46eef7cbc708fa781206c38c9b172301537
 
 build:
   noarch: python
