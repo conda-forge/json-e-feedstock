@@ -5,9 +5,13 @@ Home: https://taskcluster.github.io/json-e
 
 Package license: MPL-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/json-e-feedstock/blob/master/LICENSE.txt)
 
 Summary: A data-structure parameterization system written for embedding context in JSON objects
+
+Development: https://github.com/taskcluster/json-e
+
+Documentation: https://simplejson.readthedocs.io
 
 The central idea is to treat a data structure as a "template" and transform it, using another data structure as context, to produce an output data structure.
 There are countless libraries to do this with strings, such as mustache. What makes JSON-e unique is that it operates on data structures, not on their textual representation. This allows input to be written in a number of formats (JSON, YAML, etc.) or even generated dynamically. It also means that the output cannot be "invalid", even when including large chunks of contextual data.
@@ -111,9 +115,9 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
