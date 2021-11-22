@@ -1,7 +1,7 @@
 About json-e
 ============
 
-Home: https://taskcluster.github.io/json-e
+Home: https://json-e.js.org
 
 Package license: MPL-2.0
 
@@ -9,9 +9,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/json-e-feedstoc
 
 Summary: A data-structure parameterization system written for embedding context in JSON objects
 
-Development: https://github.com/taskcluster/json-e
-
-Documentation: https://simplejson.readthedocs.io
+Development: https://github.com/json-e/json-e
 
 The central idea is to treat a data structure as a "template" and transform it, using another data structure as context, to produce an output data structure.
 There are countless libraries to do this with strings, such as mustache. What makes JSON-e unique is that it operates on data structures, not on their textual representation. This allows input to be written in a number of formats (JSON, YAML, etc.) or even generated dynamically. It also means that the output cannot be "invalid", even when including large chunks of contextual data.
@@ -45,6 +43,7 @@ Installing `json-e` from the `conda-forge` channel can be achieved by adding `co
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `json-e` can be installed with:
@@ -63,7 +62,8 @@ conda search json-e --channel conda-forge
 About conda-forge
 =================
 
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+[![Powered by
+NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
