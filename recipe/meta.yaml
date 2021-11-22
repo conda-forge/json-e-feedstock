@@ -1,32 +1,33 @@
-{% set name = "json-e" %}
-{% set version = "4.4.2" %}
+{% set version = "4.4.3" %}
 
 package:
-  name: {{ name }}
+  name: json-e
   version: {{ version }}
 
 source:
-  url: https://github.com/taskcluster/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 63ba85bfa603162e3c7887f353d803afb910fb3e6de4633b4528865fbf345476
+  - folder: dist
+    url: https://pypi.io/packages/source/j/json-e/json-e-{{ version }}.tar.gz
+    sha256: 8ed3974faa887ca96a7987298f6550cf2ad35472419a980766b3abe48258de0a
+  - folder: src
+    url: https://github.com/json-e/json-e/archive/refs/tags/v{{ version }}.tar.gz
+    sha256: 90b0ac0d1899902d3923a35a16a9a0cef26a12f213feda33c079bd075db3c425
 
 build:
   noarch: python
   number: 0
-  script:
-    - cd py && {{ PYTHON }} setup.py sdist
-    - cd dist && {{ PYTHON }} -m pip install {{ name }}-{{ version }}.tar.gz -vv
+  script: cd dist && {{ PYTHON }} -m pip install . --no-deps
 
 requirements:
   host:
-    - python >=2.7,<3|>=3.6
+    - python >=3.6
     - pip
   run:
-    - python >=2.7,<3|>=3.6
+    - python >=3.6
 
 test:
   source_files:
-    - py/test
-    - specification.yml
+    - src/py/test
+    - src/specification.yml
   requires:
     - freezegun
     - hypothesis
@@ -39,16 +40,15 @@ test:
     - jsone
   commands:
     - python -m pip check
-    - cd py/test && nosetests
+    - cd src/py/test && nosetests
 
 about:
-  home: https://taskcluster.github.io/json-e
+  home: https://json-e.js.org
   license: MPL-2.0
   license_family: MOZILLA
-  license_file: LICENSE
+  license_file: src/LICENSE
   summary: A data-structure parameterization system written for embedding context in JSON objects
-  doc_url: https://simplejson.readthedocs.io
-  dev_url: https://github.com/taskcluster/json-e
+  dev_url: https://github.com/json-e/json-e
   description: >
     The central idea is to treat a data structure as a "template" and transform it, using another data structure as context, to produce an output data structure.
 
