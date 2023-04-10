@@ -1,4 +1,4 @@
-{% set version = "4.5.1" %}
+{% set version = "4.5.2" %}
 
 package:
   name: json-e
@@ -7,10 +7,10 @@ package:
 source:
   - folder: dist
     url: https://pypi.io/packages/source/j/json-e/json-e-{{ version }}.tar.gz
-    sha256: 64f32ec098fff61ba5f4f71ff88caf89b59eaf2ffee67ffc64ecb04e22bb82fe
+    sha256: 0d1203645a5753dec2da1ceab279f82169023948eff858b87968117e8a592e10
   - folder: src
     url: https://github.com/json-e/json-e/archive/refs/tags/v{{ version }}.tar.gz
-    sha256: 7dd8135bbbf1abc100f959fcdcc4f6111df641277057aab54701ace3b5188484
+    sha256: 4ddffa2a62b486834f6aa83e49508d6ec8ee34ed27020b5d9a8a3d8a54d94bb8
 
 build:
   noarch: python
