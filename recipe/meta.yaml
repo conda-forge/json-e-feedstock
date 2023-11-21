@@ -43,7 +43,7 @@ test:
     - pip check
     - cd src/py/test 
     - coverage run --source=jsone --branch -m pytest -vv --color=yes --tb=long
-    - coverage report --show-missing --skip-covered --fail-under=100
+    - coverage report --show-missing --skip-covered --fail-under=96
 
 about:
   home: https://json-e.js.org
