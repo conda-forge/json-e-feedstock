@@ -3,7 +3,7 @@ About json-e-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/json-e-feedstock/blob/main/LICENSE.txt)
 
-Home: https://json-e.js.org
+Home: https://pypi.org/project/json-e
 
 Package license: MPL-2.0
 
@@ -11,10 +11,11 @@ Summary: A data-structure parameterization system written for embedding context 
 
 Development: https://github.com/json-e/json-e
 
+Documentation: https://json-e.js.org/
+
 The central idea is to treat a data structure as a "template" and transform it, using another data structure as context, to produce an output data structure.
 There are countless libraries to do this with strings, such as mustache. What makes JSON-e unique is that it operates on data structures, not on their textual representation. This allows input to be written in a number of formats (JSON, YAML, etc.) or even generated dynamically. It also means that the output cannot be "invalid", even when including large chunks of contextual data.
 JSON-e is also designed to be safe for use on untrusted data. It never uses eval or any other function that might result in arbitrary code execution. It also disallows unbounded iteration, so any JSON-e rendering operation will finish in finite time.
-
 
 Current build status
 ====================
