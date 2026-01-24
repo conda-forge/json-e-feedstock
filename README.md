@@ -3,7 +3,7 @@ About json-e-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/json-e-feedstock/blob/main/LICENSE.txt)
 
-Home: https://json-e.js.org
+Home: https://pypi.org/project/json-e
 
 Package license: MPL-2.0
 
@@ -11,10 +11,11 @@ Summary: A data-structure parameterization system written for embedding context 
 
 Development: https://github.com/json-e/json-e
 
+Documentation: https://json-e.js.org/
+
 The central idea is to treat a data structure as a "template" and transform it, using another data structure as context, to produce an output data structure.
 There are countless libraries to do this with strings, such as mustache. What makes JSON-e unique is that it operates on data structures, not on their textual representation. This allows input to be written in a number of formats (JSON, YAML, etc.) or even generated dynamically. It also means that the output cannot be "invalid", even when including large chunks of contextual data.
 JSON-e is also designed to be safe for use on untrusted data. It never uses eval or any other function that might result in arbitrary code execution. It also disallows unbounded iteration, so any JSON-e rendering operation will finish in finite time.
-
 
 Current build status
 ====================
@@ -105,12 +106,12 @@ it is possible to build and upload installable packages to the
 [conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
-To manage the continuous integration and simplify feedstock maintenance
+To manage the continuous integration and simplify feedstock maintenance,
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
-For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
+For more information, please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
@@ -137,7 +138,7 @@ merged, the recipe will be re-built and uploaded automatically to the
 everybody to install and use from the `conda-forge` channel.
 Note that all branches in the conda-forge/json-e-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
-on branches in forks and branches in the main repository should only be used to
+on branches in forks, and branches in the main repository should only be used to
 build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
