@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "4.8.1"
+  version: "4.8.2"
   python_check_max: "3.14"
 
 package:
@@ -11,10 +11,10 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/j/json-e/json_e-${{ version }}.tar.gz
-    sha256: b734766ff00f8aa0ab1f2ea6d70893564b7caa44d7fb3e53a955fede0f6c7c32
+    sha256: b475be8c7938ae48bdf7b8ab89c7fac3fd61700b7dd0c7389c6c62554898459d
     target_directory: dist
   - url: https://github.com/json-e/json-e/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: 8d039f0e28a22c66ace8d479d0f35a51081ff6dd490e665a88a92281c9c770d7
+    sha256: 3f62025233b5e336b66f0772d4d9186dc949ebe29913ce003c97e43804ff5682
     target_directory: src
 
 build:
